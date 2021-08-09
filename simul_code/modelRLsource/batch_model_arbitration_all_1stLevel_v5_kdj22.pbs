@@ -1,0 +1,6 @@
+#PBS -N kdj22
+#PBS -l ncpus=1
+#PBS -j oe
+#PBS -m a
+cd /home/kdj/repro_fmri/fmri_arbitration
+/usr/local/MATLAB/R2016b/bin/matlab -nodisplay -r "try;batch_model_arbitration_all_1stLevel_v5_kdj(24);catch;ErrorN=strsplit('$PBS_JOBID','.');fid=fopen([ErrorN{1} '.error'],'w'); fprintf(fid,'error');fclose(fid);end;quit;"

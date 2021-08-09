@@ -1,0 +1,7 @@
+#PBS -N sjh44
+#PBS -l select=1:ncpus=1:host=bml2-slave3
+#PBS -j oe
+#PBS -m a
+pyenv local Code
+cd /home/sjh/kdj/parameter_recovery/gen_simulation_dat/metarl-pm-ljh/
+python mainfit_save_2step.py 44 0 2

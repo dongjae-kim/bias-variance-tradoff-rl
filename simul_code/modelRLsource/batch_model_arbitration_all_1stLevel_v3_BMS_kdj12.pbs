@@ -1,0 +1,6 @@
+#PBS -N swlee12
+#PBS -l ncpus=1
+#PBS -j oe
+#PBS -m a
+cd /home/swlee/repro_fmri/fmri_arbitration
+/usr/local/MATLAB/R2014b/bin/matlab -nodisplay -r "try;batch_model_arbitration_all_1stLevel_v3_BMS_kdj(13);catch;ErrorN=strsplit('$PBS_JOBID','.');fid=fopen([ErrorN{1} '.error'],'w'); fprintf(fid,'error');fclose(fid);end;quit;"
