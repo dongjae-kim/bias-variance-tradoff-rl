@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/311220991.svg)](https://zenodo.org/badge/latestdoi/311220991)
+
 This repository is for "Prefrontal solution to the bias-variance trade-off
 during reinforcement learning", Dongjae Kim et al., 2021.
 
